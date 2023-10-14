@@ -1,0 +1,48 @@
+.container {
+    padding: 100px;
+}
+
+
+.flex {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+
+.card {
+    background: rgb(94, 170, 232);
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2);
+    flex:1 0 20em;
+    border-radius: 25px;
+}
+
+
+.card h1 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: rgb(236, 236, 245);
+    font-size: 40px;
+    text-transform: capitalize;
+    
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: rgb(243, 243, 243);
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: rgb(196, 199, 204); 
+    color: rgb(52, 62, 157); 
+    
+}

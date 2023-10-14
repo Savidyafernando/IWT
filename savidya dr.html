@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="doctor page.css">
+    
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="flex">
+            <div class="card">
+                <h1>Dr.Savidya</h1>
+                <pre>
+                <h3>
+                Specialty: Neurosurgeon
+                Education: Received her medical degree from the University of California, San Francisco. Completed her neurosurgery fellowship at the Mayo Clinic.
+                Practice: Performs intricate brain and spinal surgeries at a leading neuroscience center. Renowned for her precision and innovation in neurosurgical techniques.
+                </h3>
+                </pre>
+                
+            </div>
+            <div class="card">
+                <h1>Evergreen General Hospital</h1>
+                <p>
+                    Location: 456 Sunflower Avenue, Coastal Town<br>
+                    3:30 PM(Afternoon)<br>
+                    Active Patients: 0<br>
+                    Channeling Fee: Rs&nbsp;
+                    <span id="Evergreen">3500.00</span>
+                </p>
+                <center><a href="checkout_form.html" class="btn" id="EvergreenBTN">book</a></center>
+            </div>
+            <div class="card">
+                <h1>Sunrise Medical Center</h1>
+                <p>
+                    Location: 456 Sunflower Avenue, Coastal Town<br>
+                    3:30 PM(Afternoon)<br>
+                    Active Patients: 0<br>
+                    Channeling Fee: Rs&nbsp;
+                    <span id="Sunrise">3800.00</span>
+                </p>
+                <center><a href="checkout_form.html" class="btn" id="SunriseBTN">book</a></center>
+            </div>
+
+            <div class="card">
+                <h1>Mercy Grace Hospital</h1>
+                <p>
+
+                    Location: 456 Sunflower Avenue, Coastal Town<br>
+                    3:30 PM(Afternoon)<br>
+                    Active Patients: 0<br>
+                    Channeling Fee: Rs&nbsp;
+                    <span id="Mercy">4000.00</span>
+                </p>
+                <center><a href="checkout_form.html" class="btn" id="MercyBTN">book</a></center>
+            </div>
+            <div class="card">
+                <h1>Blossomfield Psychiatric Hospital</h1>
+                <p>
+                    Location: 456 Sunflower Avenue, Coastal Town<br>
+                    3:30 PM(Afternoon)<br>
+                    Active Patients: 0<br>
+                    Channeling Fee: Rs&nbsp;
+                    <span id="Blossomfield">3200.00</span>
+
+                </p>
+                <center><a href="checkout_form.html" class="btn" id="BlossomfieldBTN">book</a></center>
+            </div>
+          
+        </div>
+
+    </div>
+<script>
+    
+    document.getElementById("EvergreenBTN").addEventListener("click", function(){
+        let appointmentFee = document.getElementById("Evergreen").textContent;
+        localStorage.setItem("RsNew", appointmentFee);
+    });
+
+    document.getElementById("SunriseBTN").addEventListener("click", function(){
+        let appointmentFee = document.getElementById("Sunrise").textContent;
+        localStorage.setItem("RsNew", appointmentFee);
+    });
+
+    document.getElementById("MercyBTN").addEventListener("click", function(){
+        let appointmentFee = document.getElementById("Mercy").textContent;
+        localStorage.setItem("RsNew", appointmentFee);
+    });
+
+    document.getElementById("BlossomfieldBTN").addEventListener("click", function(){
+        let appointmentFee = document.getElementById("Blossomfield").textContent;
+        localStorage.setItem("RsNew", appointmentFee);
+    });
+
+</script>
+
+
+</body>
+
+</html>

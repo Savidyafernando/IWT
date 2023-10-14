@@ -15,44 +15,56 @@
         <title>CareConect</title>
         <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="footer.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
 
     <body>
-
+        
 
         <nav>
-            <ul class="navbar">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Channeling</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">My Appointments</a></li>
-            </ul>
+            <div class="logo">
+                <img src="Images/logo.png" width="390px" height="200px">
+            </div>
+           <div class="navbar">
+           
+                <a href="home.html">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Channeling</a>
+                <a href="#">Contact Us</a>
+                <a href="#">My Appointments</a>
+                <a id="logsign" href="#">Log In</a>
+                <a id="logsign" href="#">Sign In</a> 
+            </div>
         </nav>
+
+
+        
         
         <div class="slides">
-            <img src="Images/Andrew.png.webp" alt="">
+            <img src="Images/picture.webp" alt="">
         </div>
 
-        <div class="hd">
-            <div class="type">
-                Select type
-                <br>
-                <select name="dh" id="dh">
-                    <option value="Doctor" >Doctor</option>
-                    <option value="Hospital">Hospital</option>
-                </select>
+        <form method="POST" action="home.php">
+            <div class="hd">
+                <div class="type">
+                    Select type
+                    <br>
+                    <select name="dh" id="dh">
+                        <option value="Doctor">Doctor</option>
+                        <option value="Hospital">Hospital</option>
+                    </select>
+                </div>
+                <div class="search">
+                    <p id="searched">Doctor name</p>
+                    <input type="text" name="searchedName" id="searchedName" placeholder="   Search Doctor Name  (Max 50 Characters)" maxlength="50">
+                    <button type="submit" class="searchb">Search</button>
+                </div>
             </div>
-            <div class="search">
-                <p id="searched">Doctor name</p>
-                <input type="text" placeholder="   Search Doctor Name  (Max 50 Characters)" maxlength="50">
-                <button class="searchb">Search</button>
-
-            </div>
-        </div>
+        </form>
+        
 
         <div class="slideshow-container">
             <div class="mySlides fade">
@@ -67,11 +79,87 @@
               <img src="image3.jpg" style="width:100%">
             </div>
           </div>
-          
+          <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Achivers<span>.360</span></h3>
+
+				<p class="footer-links">
+					<a href="#" class="link-1">Home</a>
+					
+					<a href="#">Blog</a>
+				
+					<a href="#">Pricing</a>
+				
+					<a href="#">About</a>
+					
+					<a href="#">Faq</a>
+					
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Achivers.360 © 2023</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>444 2nd lane</span> Panadura,Western Province, Srilanka</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+94 716651769 / </p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@achieves.360.com">support@achieves.360.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Achievers.360 is a online job protal that helps you to find jobs and search for new jobs.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><img src="img/fb.png" ></a>
+					<a href="#"><img src="img/twitter.png"></a>
+					<a href="#"><img src="img/linkedin.jpg"></a>
+                    <a href="#"><img src="img/Insta.png"></a>
+					<a href="#"><img src="img/github.png"></a>
+
+				</div>
+
+
+			</div>
+
+		</footer>
+         
+        <script>
+            document.getElementById("dh").addEventListener("change", function(){
+                if(document.getElementById("dh").value  == "Doctor"){
+                    document.getElementById("searched").textContent = "Doctor Name";
+                    document.getElementById("searchedName").placeholder = "Search Doctor Name  (Max 50 Characters)";
+                } else if(document.getElementById("dh").value  == "Hospital"){
+                    document.getElementById("searched").textContent = "Hospital Name";
+                    document.getElementById("searchedName").placeholder = "Search Hospital Name  (Max 50 Characters)";
+                }
+            })
+            
+            
+        </script>
 
     </body>
 
-
+    
 
 
 
